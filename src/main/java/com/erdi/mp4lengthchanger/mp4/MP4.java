@@ -46,8 +46,8 @@ public class MP4 {
 		if(timescaleLocation == -1)
 			throw new MP4ReadException("Couldn't find timescale location");
 
-		duration = readInt(durationLocation) & 0xffffffff;
-		timescale = readInt(timescaleLocation) & 0xffffffff;
+		duration = readInt(durationLocation);
+		timescale = readInt(timescaleLocation);
 	}
 	
 	private int readInt(int location) {
